@@ -5,4 +5,10 @@ function agregar_css_js(){
     wp_enqueue_script('boostrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array( 'jquery' ),'5.3.3',true);
 }
 add_action( 'wp_enqueue_scripts', 'agregar_css_js' );
+
+//soporte imagenes destacadas
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+    
+}
 ?>
